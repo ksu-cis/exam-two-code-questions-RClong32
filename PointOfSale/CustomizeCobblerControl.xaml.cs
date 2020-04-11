@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using ExamTwoCodeQuestions.Data;
 namespace ExamTwoQuestions.PointOfSale
 {
     /// <summary>
@@ -22,5 +22,40 @@ namespace ExamTwoQuestions.PointOfSale
         {
             InitializeComponent();
         }
+
+        private void Red_Click(object sender, RoutedEventArgs e)
+        {
+            FruitFilling a;
+            a = FruitFilling.Cherry;
+            if (DataContext is Cobbler)
+            {
+                Cobbler b = (Cobbler)DataContext;
+                b.Fruit = a;
+            }
+        }
+
+        private void Pink_Click(object sender, RoutedEventArgs e)
+        {
+            FruitFilling a;
+            a = FruitFilling.Peach;
+            if (DataContext is Cobbler)
+            {
+                Cobbler b = (Cobbler)DataContext;
+                b.Fruit = a;
+            }
+        }
+
+        private void Blue_Click(object sender, RoutedEventArgs e)
+        {
+            FruitFilling a;
+            a = FruitFilling.Blueberry;
+            if (DataContext is Cobbler)
+            {
+                Cobbler b = (Cobbler)DataContext;
+                b.Fruit = a;
+            }
+        }
+
+
     }
 }
